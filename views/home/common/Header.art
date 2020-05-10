@@ -1,0 +1,32 @@
+<div id="header">
+    <nav class="navbar navbar-default navbar-static-top navbar_ll">
+        <!--<div class="container">-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed open" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="/home/images/logo.png" alt="" width="55" height="55">
+                    <h1>流浪之家</h1>
+                    <!--<img src="img/lk_logo_sm.png" alt="撩课" width="180">-->
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav navbar-nav">
+                    <li class="{{currentLink == 'index' ? 'active' : ''}}"><a href="/home/">&nbsp;&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;</a></li>
+                    <li class="{{currentLink == 'adopt' ? 'active' : ''}}"><a href="/home/adopt">关于 ta 们</a></li>
+                    <li class="{{currentLink == 'knowledge' ? 'active' : ''}}"><a href="/home/knowledge">&nbsp;&nbsp;&nbsp;须知&nbsp;&nbsp;&nbsp;</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                    <li class="{{currentLink == 'personalInfo' ? 'active' : ''}}"><a href="/home/register">注册</a></li>
+                    <li class="{{currentLink == 'personalInfo' ? 'active' : ''}}"><a href="/home/logout">登录</a></li>
+                </ul>
+            </div>
+        <!--</div>-->
+    </nav>
+</div>
+

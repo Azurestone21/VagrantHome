@@ -1,0 +1,139 @@
+{{extend './common/Layout.art'}}
+{{block 'link'}}
+<style>
+  .container {
+    background-color: #fff;
+    padding: 0 0 30px;
+  }
+</style>
+{{/block}}
+
+{{block 'main'}}
+<!-- 头部 -->
+{{include './common/header.art'}}
+
+<!-- 焦点图-->
+<div class="container">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <!-- 指示器 -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 中间内容 -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" data-lg-img="/home/images/jdt1-1140-410.png" data-sm-img="/home/images/jdt1.jpg">
+      </div>
+      <div class="item" data-lg-img="/home/images/jdt2-1140-410.png" data-sm-img="/home/images/jdt2.png">
+      </div>
+      <div class="item" data-lg-img="/home/images/jdt3-1140-410.png" data-sm-img="/home/images/jdt3.jpg">
+      </div>
+    </div>
+    <!-- 左右控制 -->
+    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control rightColor" href="#carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+  </div>
+</div>
+
+<!-- 关于ta们 -->
+<div class="context">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-6 about">
+        <h2>关于 ta 们</h2>
+        <p>我们身边的流浪猫狗随处们可见，他们孤独无助，没有食有，没有可以避风躲雨的地方，脏兮兮的身体让路人避而远之。中国的流浪狗的数量已经达到惊人的<span>4000</span>万只，占全球流浪狗的<span>1/5</span>之多，而且其中的大部分流浪狗，还会被有些人虐待，有的惨死路人之手。</p>
+        <p>现今媒体对流浪猫狗的报道越来越多,大家也对它们的境地越来越重视，这不仅是社会风气在越变越好，也是让许许多多有爱宠的人士承担自己的责任。现在，我国许多城市都要办理养狗证，登记主人信息，在减小宠物丢失率的司时，也给那些不负责任的主人敲响了警钟!</p>
+      </div>
+
+      <div class="col-lg-6 col-sm-6 about">
+        <div>
+          <img src="/home/images/catdog1.jpg"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-sm-6 about">
+        <div>
+          <img src="/home/images/catdog2.jpg"/>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 about">
+        <h2>关于 wo 们</h2>
+        <p><span class="title">流浪之家求助站</span> 成立于2020年5月1号。目前是由青年自发组织的纯公益性质的流浪宠物救助保护组织。</p>
+        <p>今后，我们会在救助流浪动物的同时，积极宣扬保护动物、科学喂养的知识。我们希望通过自己的实际行动倡导“保护动物、关爱生命”的社会习惯，为社会文明进步做出贡献，同时也给流浪的猫猫狗狗一个温暖的家，结束它们的流浪生涯。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 尾部 -->
+{{include './common/Footer.art'}}
+{{/block}}
+
+{{block 'script'}}
+<script src="/home/js/echarts.min.js"></script>
+<script src="/home/js/china.js"></script>
+ <script src="/home/js/map.js"></script>
+<script>
+  /*map();
+
+  function map() {
+    console.log(mapData[0].count)
+  }*/
+
+  /*
+    轮播图设计
+    一般用两套图片，以便适应PC端和移动端
+    PC端：图片做背景使用，设置background属性值可以保证图片的中心始终在可视范围的中间
+    移动端：直接用图片
+   */
+  $(function () {
+    $(window).on('resize', function () {
+      // 1.获取窗口宽度
+      let clientW = $(window).width();
+      console.log(clientW);
+
+      // 2. 设置改变图片临界值
+      // 窗口大于800px就显示大图片
+      let isShowBigImage = clientW >=800;
+
+      // 3.获取所有的item
+      let $item = $('#carousel .item');
+
+      // 4.遍历
+      $item.each(function (index, item) {
+        // 4.1 取出图片路径
+        let imgSec = isShowBigImage ? $(item).data('lg-img') : $(item).data('sm-img');
+        let imgUrl = 'url("' + imgSec + '")';
+
+        // 4.2 设置背景图片
+        $(item).css({
+          // 这里一定要使用backgroundImage，不能使用background，否则css位置设置无效
+          backgroundImage: imgUrl
+        });
+
+        // 4.3 设置img标签
+        // 当窗口缩小到移动端时，换成图片
+        if(!isShowBigImage) {
+          let $img = '<img src="' + imgSec + '">';
+          // 这里使用empty()，是因为窗口大小不断被检测，这个方法会不断被调用，图片也就会不断插入，所以要清楚前面插入的图片
+          $(item).empty().append($img);
+        } else {
+          $(item).empty();
+        }
+      })
+    });
+    $(window).trigger('resize');
+  });
+</script>
+{{/block}}
+
+

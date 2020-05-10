@@ -1,0 +1,79 @@
+{{extend './common/Layout.art'}}
+
+{{block 'link'}}
+<link rel="stylesheet" href="/home/css/adopt-knowledge.css">
+<style>
+  .container {
+    background-color: #fff;
+    padding: 30px;
+  }
+
+  .container ul {
+    list-style-type:disc
+  }
+</style>
+{{/block}}
+
+{{block 'main'}}
+    <!-- 头部 -->
+    {{include './common/header.art'}}
+    <!-- 主体 -->
+    <div class="knowledge-context">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 adopt">
+                    <h2>领养资格</h2>
+                    <p>领养前，领养家庭必须认真考虑清楚是否有能力和条件领养动物，和负责任一生。</p>
+                    <ul>
+                        <li>湛江本地人，或在湛江工作者</li>
+                        <li>有固定住所和稳定收入者，能为被领养动物提供安全、稳定的生存的环境</li>
+                        <li>家人愿意接受被领养动物，并一同照顾</li>
+                        <li>定期体内外驱虫，每年按时打疫苗</li>
+                        <li>添加领养回访联系方式，能配合我们对领养动物的定期回访工作</li>
+                        <li>同意给被领养的动物采取必要的节育措施，避免其过度繁殖</li>
+                        <li>谢绝未成年人、学生和猫狗贩</li>
+                    <ul>
+                </div>
+
+                <div class="col-lg-6 col-sm-6 photo">
+                    <div>
+                        <img src="/home/images/cat1.jpg" alt="" />
+                        <img src="/home/images/dog1.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="/home/images/dog2.jpg" alt="" />
+                        <img src="/home/images/cat2.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 photo">
+                    <div>
+                        <img src="/home/images/cat3.jpg" alt="" />
+                        <img src="/home/images/dog3.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="/home/images/dog4.jpg" alt="" />
+                        <img src="/home/images/cat4.jpg" alt="" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6 adopt">
+                    <h2>领养步骤</h2>
+                    <p>领养是免费的！</p>
+                    <ul>
+                        <li>检查自己是否符合领养资格，与家人沟通，做好准备一同照顾被领养动物</li>
+                        <li>下载并填写：领养申请表</li>
+                        <li>联系我们（电话：000-88888888）预约办理领养手续，或关注我们领养日活动信息，直接去现场进行领养</li>
+                        <li>携带身份证到协会或领养日现场，接受协会审核、办理手续，挑选动物，带它回家</li>
+                    <ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    {{include './common/Footer.art'}}
+{{/block}}

@@ -1,0 +1,246 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* 去除a标签的样式 */
+a{text-decoration:none;}
+
+/* 让图片按div的大小显示*/
+img{max-width:100%;}
+
+@font-face {
+    font-family: 'lk';
+    src: url('../fonts/lk.eot') format('embedded-opentype'),
+    url('../fonts/lk.svg') format('svg'),
+    url('../fonts/lk.ttf') format('truetype'),
+    url('../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: lk;
+    font-style: normal;
+}
+
+body {
+    /*background-color: #b3cc97;*/
+    background-color: #d3f2f7;
+}
+
+/* 头部 */
+.navbar_ll {
+    background-color: #fff;
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    width: 200px;
+    height: 70px;
+    padding: 10px 15px;
+}
+
+.navbar-brand img {
+    float: left;
+}
+
+.navbar-brand h1 {
+    color: #3a3f4b;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.navbar_ll .navbar-nav a {
+    height: 70px;
+    line-height: 40px;
+}
+
+#header .navbar_ll .navbar-nav li.active a {
+    background-color: transparent;
+    /*border-bottom: 5px solid #1a8fc2;*/
+    /*color: #ffffff;
+    background-color: #343434;
+    border-bottom: 1px solid #ffffff;*/
+    font-weight: bold;
+    color: #80c9ff;
+}
+
+#header .navbar_ll .navbar-nav li a:hover {
+    margin-top: -10px;
+    color: #80c9ff;
+}
+
+.navbar_ll .navbar-toggle {
+    margin-top: 18px;
+}
+
+.navbar-right li {
+    margin-right: 20px;
+    width: 70px;
+    height: 100%;
+}
+
+.navbar-right li a {
+    margin-top: 18px;
+    padding: 0;
+    display: block;
+    width: 70px;
+    height: 37px !important;
+    border: 1px solid #1a8fc2;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+}
+
+#header .navbar_ll .navbar-right li a:hover {
+    margin-top: 0 !important;
+    border: none !important;
+    background-color: #80c9ff !important;
+    color: white !important;
+}
+
+/* 轮播图 */
+#carousel .item {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.left{
+    text-shadow:none;
+}
+
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+}
+
+@media screen and (min-width: 800px) {
+    #carousel .item {
+        height: 410px;
+    }
+}
+
+/* 关于ta们 */
+.context .container {
+    padding: 20px 20px;
+}
+.row {
+    margin: 20px 0 50px 0;
+}
+
+.about h2 {
+    color: #039ae4;
+    font-family: '幼圆';
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #7e7a83;
+    font-family: '幼圆';
+    font-weight: bolder;
+    line-height: 26px;
+    text-indent: 2em;
+}
+
+.about p span {
+    color: #ff1513;
+    font-weight: 600;
+}
+
+.about .title {
+    color: #0f0f0f;
+    font-family: '微软雅黑';
+    font-weight: 600;
+}
+
+.about ul {
+    padding-left: 20px;
+    line-height: 26px;
+}
+
+.about div {
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.about img {
+    width: 300px;
+    /*height: 150px;*/
+    margin-left: 2px;
+}
+
+/* 尾部 */
+.footer {
+    width: 100%;
+    height: 30px;
+    /*border-top: 1px solid #1a8fc2;*/
+    margin-top: 60px;
+}
+
+.footer ul li {
+    line-height: 35px;
+    margin-right: 20px;
+    float: right;
+}
+
+.footer ul li a {
+    display: inline-block;
+    height: 35px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #3a3a3a;
+    /*background-color: #1b6d85;*/
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+@media screen and (max-width: 1200px) {
+    .push .container .context-news {
+        border-right: none;
+    }
+
+    .push .context-policy {
+        padding-left: 15px;
+    }
+
+
+    .footer .container div {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container .jumbotron img {
+        width: 100%;
+        height: 214px;
+    }
+
+    .context .container .show {
+        width: 100%;
+        height: 214px;
+        margin-bottom: 5px;
+    }
+
+    .context .container .show img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chart {
+        display: none;
+    }
+
+    .count {
+        padding-top: 10px;
+    }
+}
+
+
