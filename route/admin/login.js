@@ -1,6 +1,5 @@
-
 // 导入用户集合构造函数
-let {User} = require('../../model/user');
+let { User } = require('../../model/user');
 // 导入bcrypt
 let bcrypt = require('bcryptjs');
 

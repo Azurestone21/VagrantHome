@@ -67,10 +67,59 @@
 	padding: 8px 0;
 }
 
+/* 加粗 */
+strong {
+	font-weight: bold;
+}
+/* 斜体 */
+.article-content i {
+	font-style:italic;
+}
+
+/* 表格 */
+table,th,td {
+	border: 1px solid #555555;
+}
+th,td {
+	padding: 3px 20px;
+	height: 25px;
+}
+
+/* 无序列表 */
+.article-content ul {
+	padding-left: 20px;
+	list-style: disc;
+}
+/* 有序列表 */
+.article-content ol {
+	padding-left: 20px;
+	list-style-type: decimal;
+}
+
+/* 注释 */
+blockquote p::before {
+	content: "|";
+	color: #cccccc;
+	display: block;
+	width: 5px;
+	height: 100%;
+	background-color: #cccccc;
+	float: left;
+	margin-right: 10px;
+}
+blockquote p {
+	color: #cccccc;
+}
+
 /* 评论开始 */
 .article-comment h4 {
 	font-size: 16px;
 	margin-bottom: 10px;
+	font-weight: bold;
+}
+.article-comment h2 {
+	font-size: 14px;
+	color: #ff4f38;
 }
 
 .article-comment .comment {

@@ -3,6 +3,12 @@ let express = require('express');
 // 创建博客展示页面路由
 let home = express.Router();
 
+// 渲染 注册 页面
+home.get('/register', require('./home/registerPage'));
+
+// 前台 注册 路由
+home.post('/register', require('./home/register'));
+
 // 实现退出功能
 home.get('/logout', require('./admin/logout'));
 
@@ -20,18 +26,5 @@ home.get('/article', require('./home/article'));
 
 // 前台 文章评论 路由
 home.post('/comment', require('./home/comment'));
-
-// 前台 活动项目 路由
-// home.get('/activity', require('./home/activity'));
-
-// 前台 在线教学资源 路由
-// home.get('/onlineResources', require('./home/onlineResources'));
-
-// 前台 个人中心 路由
-// home.get('/personalInfo', require('./home/personalInfo'));
-
-
-
-
 
 module.exports = home;

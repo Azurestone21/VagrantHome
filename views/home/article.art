@@ -34,18 +34,18 @@
             </div>
           </form>
           {{else}}
-          <div><h2>先进行登录，再对文章进行评论</h2></div>
+          <div><h2>先进行登录，再对文章进行评论!</h2></div>
           {{/if}}
           <div class="comment-list">
             {{each comments}}
             <div class="mb10">
               <div class="article-info">
                 <span class="author">{{$value.uid.username}}</span>
-                <span>{{dateFormat($value.time, 'yyyy.mm-dd')}}</span>
+                <span>{{dateFormat($value.time, 'yyyy-mm-dd')}}</span>
                 <span>{{$value.uid.email}}</span>
               </div>
               <div class="comment-content">
-                {{$value.content}}
+                {{@$value.content}}
               </div>
             </div>
             {{/each}}
