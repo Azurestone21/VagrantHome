@@ -1,6 +1,6 @@
 // 导入用户集合构造函数
 let { User } = require('../../model/user');
-// 导入bcrypt
+// 导入bcryptjs
 let bcrypt = require('bcryptjs');
 
 let login = async  (req, res) => {

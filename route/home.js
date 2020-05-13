@@ -27,4 +27,10 @@ home.get('/article', require('./home/article'));
 // 前台 文章评论 路由
 home.post('/comment', require('./home/comment'));
 
+// 前台 免责声明 路由
+home.get('/statement', require('./home/statement'));
+
+// 前台 联系我们 路由
+home.get('/contact', require('./home/contact'));
+
 module.exports = home;

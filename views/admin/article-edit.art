@@ -43,8 +43,7 @@
 
         <div class="form-group">
           <label>内容</label>
-          <textarea name="content" class="form-control" id="editor" value="{{article && article.content
-}}"></textarea>
+          <textarea name="content" class="form-control" id="editor" value="{{article && article.content}}"></textarea>
         </div>
         <div class="buttons">
           <input type="submit" class="btn btn-primary" value="{{button}}">

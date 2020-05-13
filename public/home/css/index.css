@@ -10,7 +10,7 @@ a{text-decoration:none;}
 /* 让图片按div的大小显示*/
 img{max-width:100%;}
 
-@font-face {
+/*@font-face {
     font-family: 'lk';
     src: url('../fonts/lk.eot') format('embedded-opentype'),
     url('../fonts/lk.svg') format('svg'),
@@ -22,10 +22,9 @@ img{max-width:100%;}
 [class*=" icon-"] {
     font-family: lk;
     font-style: normal;
-}
+}*/
 
 body {
-    /*background-color: #b3cc97;*/
     background-color: #d3f2f7;
 }
 
@@ -36,71 +35,70 @@ body {
     padding: 0 20px;
 }
 
+/* 导航前标志 */
 .navbar-brand {
     width: 200px;
     height: 70px;
     padding: 10px 15px;
+    overflow: hidden;
+    position: relative;
 }
-
 .navbar-brand img {
-    float: left;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    background-position: center center;
 }
-
 .navbar-brand h1 {
     color: #3a3f4b;
     font-size: 26px;
     font-weight: bold;
     line-height: 50px;
+    padding-left: 62px;
 }
 
+/* 按键 */
+.navbar-header button {
+    margin-top: 20px;
+}
+
+/* 导航 */
 .navbar_ll .navbar-nav a {
     height: 70px;
     line-height: 40px;
 }
-
+/* 按下 */
 #header .navbar_ll .navbar-nav li.active a {
     background-color: transparent;
-    /*border-bottom: 5px solid #1a8fc2;*/
-    /*color: #ffffff;
-    background-color: #343434;
-    border-bottom: 1px solid #ffffff;*/
     font-weight: bold;
     color: #80c9ff;
 }
-
-#header .navbar_ll .navbar-nav li a:hover {
+/* 悬浮 文字向上移 */
+#header #nav .nav-left li a:hover {
     margin-top: -10px;
     color: #80c9ff;
 }
 
-.navbar_ll .navbar-toggle {
-    margin-top: 18px;
+/* 右边 注册-登录 */
+#header #nav .nav-right {
+    float: right;
 }
-
-.navbar-right li {
-    margin-right: 20px;
-    width: 70px;
-    height: 100%;
+#header #nav .nav-right li {
+    margin-right: 10px;
+    height: 30px;
+    margin-top: 15px;
 }
-
-.navbar-right li a {
-    margin-top: 18px;
-    padding: 0;
-    display: block;
-    width: 70px;
-    height: 37px !important;
-    border: 1px solid #1a8fc2;
-    border-radius: 15px;
-    font-size: 16px;
+#header #nav .nav-right li a {
+    display: inline;
+    padding: 5px 20px;
     text-align: center;
-    line-height: 35px;
+    border-radius: 20px;
+    border: 1px solid #1a8fc2;
 }
-
-#header .navbar_ll .navbar-right li a:hover {
-    margin-top: 0 !important;
-    border: none !important;
-    background-color: #80c9ff !important;
-    color: white !important;
+#header #nav .nav-right li a:hover {
+    color: #fff;
+    background-color: #80c9ff;
+    border: none;
 }
 
 /* 轮播图 */
@@ -110,14 +108,13 @@ body {
     background-size: cover;
 }
 
+/* 去掉两边按键背景颜色 */
 .left{
     text-shadow:none;
 }
-
 .carousel-control.right, .carousel-control.left{
     background-image: none;
 }
-
 @media screen and (min-width: 800px) {
     #carousel .item {
         height: 410px;
@@ -132,13 +129,14 @@ body {
     margin: 20px 0 50px 0;
 }
 
+/* 小标题 */
 .about h2 {
     color: #039ae4;
     font-family: '幼圆';
     font-weight: bolder;
     margin-bottom: 10px;
 }
-
+/* 正文 */
 .about p {
     color: #7e7a83;
     font-family: '幼圆';
@@ -146,28 +144,23 @@ body {
     line-height: 26px;
     text-indent: 2em;
 }
-
 .about p span {
     color: #ff1513;
     font-weight: 600;
 }
-
 .about .title {
     color: #0f0f0f;
     font-family: '微软雅黑';
     font-weight: 600;
 }
-
 .about ul {
     padding-left: 20px;
     line-height: 26px;
 }
-
 .about div {
     margin-bottom: 3px;
     text-align: center;
 }
-
 .about img {
     width: 300px;
     /*height: 150px;*/
@@ -178,69 +171,23 @@ body {
 .footer {
     width: 100%;
     height: 30px;
-    /*border-top: 1px solid #1a8fc2;*/
     margin-top: 60px;
 }
-
 .footer ul li {
     line-height: 35px;
     margin-right: 20px;
     float: right;
 }
-
 .footer ul li a {
     display: inline-block;
     height: 35px;
     text-decoration: none;
     font-size: 12px;
     color: #3a3a3a;
-    /*background-color: #1b6d85;*/
 }
 .footer ul li a:hover {
     text-decoration: underline;
     color: black;
-}
-
-@media screen and (max-width: 1200px) {
-    .push .container .context-news {
-        border-right: none;
-    }
-
-    .push .context-policy {
-        padding-left: 15px;
-    }
-
-
-    .footer .container div {
-        margin-top: 5px;
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .container .jumbotron img {
-        width: 100%;
-        height: 214px;
-    }
-
-    .context .container .show {
-        width: 100%;
-        height: 214px;
-        margin-bottom: 5px;
-    }
-
-    .context .container .show img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .chart {
-        display: none;
-    }
-
-    .count {
-        padding-top: 10px;
-    }
 }
 
 

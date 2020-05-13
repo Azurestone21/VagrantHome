@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>login</title>
-    <link rel="stylesheet" href="/home/css/bootstrap/css/bootstrap.css">
-    <script src="/home/js/jquery-1.12.4/jquery-1.12.4.js"></script>
-    <script src="/home/css/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/home/css/login.css">
-</head>
-<body>
+{{extend './common/Layout.art'}}
+{{block 'link'}}
+<link rel="stylesheet" href="/home/css/login.css">
+{{/block}}
+
+{{block 'main'}}
+<!-- 头部 -->
+{{include './common/header.art'}}
     <div class="login">
         <form>
             <div class="title">
@@ -37,5 +34,4 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+{{/block}}

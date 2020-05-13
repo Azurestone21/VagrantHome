@@ -1,4 +1,4 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -8,21 +8,100 @@
 
 input,button {
     outline: none;
+}*/
+
+/* 头部 */
+.navbar_ll {
+    background-color: #fff;
+    margin-bottom: 0;
+    padding: 0 20px;
 }
 
-.register {
+/* 导航前标志 */
+.navbar-brand {
+    width: 200px;
+    height: 70px;
+    padding: 10px 15px;
+    overflow: hidden;
+    position: relative;
+}
+.navbar-brand img {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    background-position: center center;
+}
+.navbar-brand h1 {
+    color: #3a3f4b;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-left: 62px;
+    margin-top: 0;
+}
+
+/* 按键 */
+.navbar-header button {
+    margin-top: 20px;
+}
+
+/* 导航 */
+.navbar_ll .navbar-nav a {
+    height: 70px;
+    line-height: 40px;
+    font-size: 16px;
+}
+/* 按下 */
+#header .navbar_ll .navbar-nav li.active a {
+    background-color: transparent;
+    font-weight: bold;
+    color: #80c9ff;
+}
+/* 悬浮 文字向上移 */
+#header #nav .nav-left li a:hover {
+    margin-top: -10px;
+    color: #80c9ff;
+    font-size: 16px;
+}
+
+/* 右边 注册-登录 */
+#header #nav .nav-right {
+    float: right;
+}
+#header #nav .nav-right li {
+    margin-right: 10px;
+    height: 30px;
+    margin-top: 15px;
+}
+#header #nav .nav-right li a {
+    display: inline;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #1a8fc2;
+}
+#header #nav .nav-right li a:hover {
+    color: #fff;
+    background-color: #80c9ff;
+    border: none;
+}
+
+#register {
     width: 500px;
     height: 450px;
-    margin: 100px auto;
+    margin: 80px auto;
     border: 1px solid #e0e0e0;
     padding: 10px 30px;
+    background-color: #fff;
 }
 
-.title p {
+#register .title p {
+    font-weight: bold;
+    font-size: 26px;
     color: #ff1513;
 }
 
-.register  button {
+#register  button {
     width: 100%;
     height: 35px;
     color: #fff;
@@ -31,7 +110,7 @@ input,button {
     margin-top: 10px;
 }
 
-.register  button:hover {
+#register button:hover {
     background-color: #286090;
     color: #fff;
 }

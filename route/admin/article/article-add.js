@@ -1,8 +1,6 @@
-
 // 引入 formidable 模块 处理上传文件信息
 let formidable = require('formidable');
 let path = require('path');
-
 // 导入文章集合
 let { Article } = require('../../../model/article');
 

@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
   // size 指定每页显示的数据条数
   // display 指定客户端要显示的页码数量
   // exec 向数据库中发送查询请求
-  let article = await mongooseSexPage(Article).find().page(page).size(2).display(3).populate('author').exec();
+  let article = await mongooseSexPage(Article).find().page(page).size(4).display(3).populate('author').exec();
 
   // res.send(article);
   res.render('admin/article', {
