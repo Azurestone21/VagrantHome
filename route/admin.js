@@ -42,5 +42,11 @@ admin.post('/article-modify', require('./admin/article/article-modify'));
 // 删除文章路由
 admin.get('/article-delete', require('./admin/article/article-delete'));
 
+// 文章评论列表路由
+admin.get('/comment', require('./admin/article-comment/comment'));
+
+// 删除文章路由
+admin.get('/comment-delete', require('./admin/article-comment/comment-delete'));
+
 // 导出模块
 module.exports = admin;

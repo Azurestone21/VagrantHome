@@ -51,9 +51,9 @@
 
    cnpm install body-parser --save
 
-+ 表单信息验证
++ 对对象规则描述语言和验证器
 
-  cnpm install Joi --save
+  cnpm install joi --save
 
 + 处理表单，get/post/文件
 
@@ -66,10 +66,6 @@
 + cookie/session
 
   cnpm install express-session
-
-+ 对对象规则描述语言和验证器
-
-  cnpm install joi
 
 + 数据分页
 

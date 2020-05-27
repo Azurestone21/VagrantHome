@@ -12,6 +12,12 @@
                 文章管理
             </a>
         </li>
+        <li>
+            <a class="item {{currentLink == 'comment' ? 'active' : ''}}" href="/admin/comment">
+                <span class="glyphicon glyphicon-th-list"></span>
+                评论管理
+            </a>
+        </li>
     </ul>
     <div class="b-bar">
         @ <a href="#" target="_blank">流浪之家</a>
